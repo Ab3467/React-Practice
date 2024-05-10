@@ -1,5 +1,6 @@
-import { log } from "../../log";
-
+import { log
+    
+ } from "../../log";
 export default function IconButton({ children, icon, ...props }) {
   log('<IconButton /> rendered', 2);
 

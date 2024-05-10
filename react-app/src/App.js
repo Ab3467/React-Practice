@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Counter from "./components/Counter/Counter";
+import Counter from "./components/counter/Counter.js";
 import Header from "./components/Header";
 import { log } from "./log.js";
 

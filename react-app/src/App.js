@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+
+import Counter from "./components/Counter/Counter";
+import Header from "./components/Header";
+import { log } from "./log.js";
 
 function App() {
+  log("<App /> rendered");
+
+  const [enteredNumber, setEnteredNumber] = useState(0);
+  const [chosenCount, setChosenCount] = useState(0);
+
+  function handleChange(event) {
+    setEnteredNumber(+event.target.value);
+  }
+
+  function handleSetClick() {
+    setChosenCount(enteredNumber);
+    setEnteredNumber(0);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <main>
+        <section id="configure-counter">
+          <h2>Set Counter</h2>
+          <input type="number" onChange={handleChange} value={enteredNumber} />
+          <button onClick={handleSetClick}>Set</button>
+        </section>
+        <Counter initialCount={chosenCount} />
+      </main>
+    </>
   );
 }
 

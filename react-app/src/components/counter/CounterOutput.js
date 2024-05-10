@@ -1,13 +1,8 @@
-import { log } from '../../log';
-import logoImg from '../../assets/logo.png';
+import { log } from "../../log";
 
-export default function Header() {
-  log('<Header /> rendered', 1);
+export default function CounterOutput({ value }) {
+  log('<CounterOutput /> rendered', 2);
 
-  return (
-    <header id="main-header">
-      <img src={logoImg} alt="Magnifying glass analyzing a document" />
-      <h1>React - Behind The Scenes</h1>
-    </header>
-  );
+  const cssClass = value >= 0 ? 'counter-output' : 'counter-output negative';
+  return <span className={cssClass}>{value}</span>;
 }

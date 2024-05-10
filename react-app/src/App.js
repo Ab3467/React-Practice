@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import Counter from "./components/counter/Counter.js";
-import Header from "./components/Header";
+import Counter from "./components/Counter/Counter.js";
+import Header from "./components/Header.js";
 import { log } from "./log.js";
 
 function App() {

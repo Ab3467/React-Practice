@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
   justify-content: center;
@@ -26,7 +27,7 @@
   color: aliceblue;
   width: 4%;
   padding: 4px;
-  margin: .5%;
+  margin: .1%;
 }
 .App button:hover{
   transition: calc(.4s);

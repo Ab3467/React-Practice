@@ -6,22 +6,22 @@ export default function App() {
   const [count, setcount] = useState(0);
 
 
-  function handleReset(){
-    setcount(0)
-  }
+  // function handleReset(){
+  //   setcount(0)
+  // }
 
-  let a = 5;
+  let a = 0;
   useEffect(() => {
-    a= a+1;
+      a= a+1;
       console.log(`Value of a is ${a}`);
-  });
+  },[count]);
   
   return (
     <div className='App'>
 
       <h1>Count is {count}</h1>
       <button onClick={()=>setcount(count+1)}>+</button>
-      <button onClick={handleReset}>Reset</button>
+      {/* <button onClick={handleReset}>Reset</button> */}
       
     </div>
   )

@@ -25,7 +25,8 @@
   border-radius: 5px;
   color: aliceblue;
   width: 4%;
-  height: 2%;
+  padding: 4px;
+ 
 }
 .App button:hover{
   transition: calc(.4s);

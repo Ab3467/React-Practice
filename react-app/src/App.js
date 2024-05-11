@@ -1,4 +1,4 @@
-import React, {useState } from 'react'
+import React, {useState,useEffect } from 'react'
 import "./App.css"
 
 
@@ -8,6 +8,11 @@ export default function App() {
   function handleReset(){
     setcount(0)
   }
+
+  useEffect(() => {
+      alert("Hi I am useEffect , the React's Hook");
+  }, [])
+  
   return (
     <div className='App'>
 

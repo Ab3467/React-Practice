@@ -5,13 +5,16 @@ import "./App.css"
 export default function App() {
   const [count, setcount] = useState(0);
 
+
   function handleReset(){
     setcount(0)
   }
 
+  let a = 5;
   useEffect(() => {
-      alert("Hi I am useEffect , the React's Hook");
-  }, [])
+    a= a+1;
+      console.log(`Value of a is ${a}`);
+  });
   
   return (
     <div className='App'>

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  justify-content: center;
 }
 
 .App-logo {
@@ -11,6 +12,25 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.App h1{
+  color: #000000;
+  text-shadow: #282c34;
+  
+}
+.App button{
+  cursor: pointer;
+  background-color: #282c34;
+  border-radius: 5px;
+  color: aliceblue;
+  width: 4%;
+  height: 2%;
+}
+.App button:hover{
+  transition: calc(.4s);
+  background-color: rgb(138, 184, 224);
+  color:#282c34;
 }
 
 .App-header {

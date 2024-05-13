@@ -5,7 +5,7 @@ import "./App.css"
 export default function App() {
   const [count, setcount] = useState(0);
 
-  const [todo,settodo] = useState([
+  const [todos,settodos] = useState([
     {
       title : 'Todo 1',
       description : 'hey I am 1st',
@@ -23,9 +23,11 @@ export default function App() {
 
   const Todo = ({todo}) =>{
     return  (
-    <>
-     <div className="todo"></div>
-    </>
+    <div className="m-4 border-1">
+     <div className="todo">{todo.title}</div>
+     <div className="todo">{todo.description}</div>
+     </div>
+    
     )
   }
 
@@ -46,6 +48,10 @@ export default function App() {
       <button onClick={()=>setcount(count+1)}>+</button>
       {count && <button onClick={handleReset}>Reset</button>}             {/*conditional rendering */}
        {/* {count ?<button onClick={()=> setcount(!count)}>Reset</button>: "Nothing"}    */}
+
+       {todos.map(todo=>{
+        return <Todo todo={todo}/>
+        })}
       
     </div>
   )

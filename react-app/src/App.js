@@ -23,7 +23,7 @@ export default function App() {
 
   const Todo = ({todo}) =>{
     return  (
-    <div className="m-4 border-1">
+    <div className="m-4 border-1 text-slate-600">
      <div className="todo">{todo.title}</div>
      <div className="todo">{todo.description}</div>
      </div>

@@ -23,7 +23,7 @@ export default function App() {
 
   const Todo = ({todo}) =>{
     return  (
-    <div className="m-4 border-1 text-slate-600">
+    <div className="m-4 text-slate-600 border border-1 border-black">
      <div className="todo">{todo.title}</div>
      <div className="todo">{todo.description}</div>
      </div>
@@ -50,7 +50,7 @@ export default function App() {
        {/* {count ?<button onClick={()=> setcount(!count)}>Reset</button>: "Nothing"}    */}
 
        {todos.map(todo=>{
-        return <Todo todo={todo}/>
+        return <Todo todo={todo} key={todo.title}/>
         })}
       
     </div>

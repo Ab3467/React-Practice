@@ -21,7 +21,7 @@ export default function App() {
 
       <h1>Count is {count}</h1>
       <button onClick={()=>setcount(count+1)}>+</button>
-      <button onClick={handleReset}>Reset</button>
+      {count ?<button onClick={handleReset}>Reset</button>: "Nothing"}
       
     </div>
   )

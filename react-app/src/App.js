@@ -3,7 +3,7 @@ import "./App.css"
 
 
 export default function App() {
-  const [count, setcount] = useState([]);
+  const [cards, setcards] = useState([]);
 
  
  let fetchData = ()=>{
@@ -21,6 +21,11 @@ export default function App() {
   // },[count]);
   
   return (
+    <div className='container'>
+    <div className="card">
+      {cards}
+    </div>
+    </div>
     // <div className='App'>
 
     //   <h1>Count is {count}</h1>
@@ -32,7 +37,7 @@ export default function App() {
     //     return <Todo todo={todo} key={todo.title}/>
     //     })}
       
-    </div>
+    // </div>
   )
 }
 

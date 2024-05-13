@@ -1,47 +1,35 @@
-import React, {useState,useEffect,useRef } from 'react'
-import "./App.css"
-
+import React, { useState, useEffect } from 'react';
+import './App.css';
 
 export default function App() {
-  const [cards, setcards] = useState([]);
+  const [cards, setCards] = useState([]);
 
- 
- let fetchData = ()=>{
-  let a = await fetch("https://jsonplaceholder.typicode.com/posts");
-  let data = a.json();
- }
-  // function handleReset(){
-  //   setcount(0)
-  // }
+  const fetchData = async () => {
+    try {
+      const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+      if (!response.ok) {
+        throw new Error('Failed to fetch data');
+      }
+      const data = await response.json();
+      setCards(data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
 
-  // let a = useRef(0);    // useRef() rerendering p a ki value ko again 0 ni kry ga 
-  // useEffect(() => {
-  //     a.current= a.current+1;
-  //     console.log(`Value of a is ${a.current}`);
-  // },[count]);
-  
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div className='container'>
-    <div className="card">
-      {cards}
+      {cards.map((card) => (
+        <div className='card' key={card.id}>
+          <h1>{card.id}</h1>
+          <p>{card.body}</p>
+          <span>By: User ID {card.userId}</span>
+        </div>
+      ))}
     </div>
-    </div>
-    // <div className='App'>
-
-    //   <h1>Count is {count}</h1>
-    //   <button onClick={()=>setcount(count+1)}>+</button>
-    //   {count && <button onClick={handleReset}>Reset</button>}             {/*conditional rendering */}
-    //    {/* {count ?<button onClick={()=> setcount(!count)}>Reset</button>: "Nothing"}    */}
-
-    //    {todos.map(todo=>{
-    //     return <Todo todo={todo} key={todo.title}/>
-    //     })}
-      
-    // </div>
-  )
+  );
 }
-
-
-
-// I will work on it but on Monday
-

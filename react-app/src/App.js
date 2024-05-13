@@ -22,10 +22,11 @@ export default function App() {
 
 
   const Todo = ({todo}) =>{
-    return
+    return  (
     <>
-    
+     <div className="todo"></div>
     </>
+    )
   }
 
   function handleReset(){

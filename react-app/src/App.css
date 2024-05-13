@@ -79,3 +79,9 @@ code {
     transform: rotate(360deg);
   }
 }
+
+
+.card{
+  border: 2px solid black;
+  max-width: 23vm;
+}

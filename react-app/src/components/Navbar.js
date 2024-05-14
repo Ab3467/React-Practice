@@ -38,8 +38,10 @@ export default function Navbar() {
            {nav ? <FaBars size={30}/> : <FaTimes size={30}/>}
         </div>
         <ul className='flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-grey-800 text-grey-500'>
-
-        </ul>
+        {links.map(({id,link})=>(
+        <li key={id} className='px-4 cursor-pointer capitalize py-6 text-4xl'>{link}</li>
+         ))}
+         </ul>
     </div>
   )
 }

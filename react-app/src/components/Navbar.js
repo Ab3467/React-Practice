@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {FaBars,FaTimes} from 'react-icons/fa'
 
 export default function Navbar() {
+    const [nav,setNav] = useState(true)
     const links =[
         {
           id: 1,
@@ -33,8 +34,8 @@ export default function Navbar() {
         <li key={id} className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>{link}</li>
          ))}
         </ul>
-        <div className=" cursor-pointer">
-            <FaBars size={30}/>
+        <div onClick={()=> setNav(!nav)} className=" cursor-pointer">
+           {nav ? <FaBars size={30}/> : <FaTimes size={30}/>}
         </div>
     </div>
   )

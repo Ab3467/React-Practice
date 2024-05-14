@@ -30,7 +30,7 @@ export default function Navbar() {
 
        <ul className='flex'>
         {links.map(({id,link})=>(
-        <li key={id} className='px-4 cursor-auto capitalize font-medium text-gray-500 hover:scale-105 duration-200'>{link}</li>
+        <li key={id} className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>{link}</li>
          ))}
         </ul>
 

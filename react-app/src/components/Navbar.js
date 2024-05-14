@@ -2,9 +2,35 @@ import React from 'react'
 import {FaBars,FaTimes} from 'react-icons/fa'
 
 export default function Navbar() {
+    const links =[
+        {
+          id: 1,
+          link: 'home',
+        },
+        {
+            id: 2,
+            link: 'About',
+        },
+        {
+            id: 3,
+            link: 'portfolio',
+        },
+        {  
+            id: 4,
+            link: 'experience',
+        },
+        {  
+            id: 5,
+            link: 'contact',
+        },
+    ]
   return (
     <div className=' flex justify-between items-center w-full h-28 px-4 text-white bg-black fixed'>
-        <h1 className='text-5xl font-signature ml-2'>Portfolio</h1>
+       <div><h1 className='text-5xl font-signature ml-2'>Portfolio</h1></div> 
+       <ul className='flex'>
+        <li className='px-4 cursor-auto capitalize font-medium text-gray-500 hover:scale-105 duration-200'>Home</li>
+        <li>About</li>
+       </ul>
     </div>
   )
 }

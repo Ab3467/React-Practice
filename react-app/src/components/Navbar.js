@@ -7,22 +7,27 @@ export default function Navbar() {
         {
             id: 1,
             link: 'home',
+            // href: '/Home.js'
         },
         {
             id: 2,
             link: 'About',
+            // href: '/About.js'
         },
         {
             id: 3,
             link: 'portfolio',
+            // href: 'Portfolio.js'
         },
         {
             id: 4,
             link: 'experience',
+            // href: '/Experience.js'
         },
         {
             id: 5,
             link: 'contact',
+            // href: '/Contact.js'
         },
     ]
     return (
@@ -31,7 +36,7 @@ export default function Navbar() {
 
             <ul className=' hidden md:flex'>
                 {links.map(({ id, link }) => (
-                    <li key={id} className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>{link}</li>
+                    <li key={id} className='px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200'>{link} </li>
                 ))}
             </ul>
             <div onClick={() => setNav(!nav)} className=" cursor-pointer pr-4 z-10 text-gray-500 md:hidden">

@@ -7,10 +7,9 @@ export default function App() {
     <>
     <div>
     <Navbar/>
+    <Home/>
      </div>
-      <div>
-      <Home/>
-    </div>
+     
     </>
   )
 }

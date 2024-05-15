@@ -4,10 +4,14 @@ import Home from './components/Home'
 
 export default function App() {
   return (
+    <>
     <div>
-      <Navbar/>
+    <Navbar/>
+     </div>
+      <div>
       <Home/>
     </div>
+    </>
   )
 }
 

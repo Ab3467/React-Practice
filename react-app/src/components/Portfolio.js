@@ -41,8 +41,8 @@ export default function Portfolio() {
                     <p className='py-6'>Plz Check out some of my work here </p>
                 </div>
 
-                {portfolios.map(({ id, src }) => (
-                    <div className=' grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0' key={id}>
+                <div className=' grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0' >
+                    {portfolios.map(({ id, src }) => (
                         <div className=' shadow-sm shadow-gray-600 rounded-lg'>
                             <img src={src} alt="port" className=' rounded-md duration-200 hover:scale-105' />
                             <div className=' flex items-center justify-center'>
@@ -50,9 +50,8 @@ export default function Portfolio() {
                                 <button className=' w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105'>Code</button>
                             </div>
                         </div>
-                    </div>
-
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     )

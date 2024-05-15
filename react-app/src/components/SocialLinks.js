@@ -51,8 +51,12 @@ export default function SocialLinks() {
       <ul>
        {links.map((id,child,download,href,style)=>(
     <li key={id} className={'flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] rounded-md bg-gray-500 hover:rounded-none duration-500'+ " " +style}>
-        <a href="https://www.linkedin.com/in/ahmad-abu-bakr-481270254/" className=' flex justify-between w-full text-white items-center'>
-        <> {child} <FaLinkedin size={30}/></>
+        <a 
+        href={href} 
+        className=' flex justify-between w-full text-white items-center'>
+        download={download}
+        target="_blank"
+        {child}
         </a>
     </li>
        ))}

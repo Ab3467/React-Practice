@@ -25,13 +25,13 @@ export default function SocialLinks() {
             style:''
           },
           {
-            id:3,
-            child:(
+            id: 3,
+            child: (
                <>
-               Mail <HiOutlineMail size={30}/>
+                 Mail <HiOutlineMail size={30}/>
                </>
             ),
-            href: "ahmed.nums345@gmail.com"
+            href: "mailto:ahmad.abubakar@vyro.ai"
           },
           {
             id:4,

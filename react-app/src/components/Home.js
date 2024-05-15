@@ -15,16 +15,16 @@ export default function Home() {
             Internship at Vyro.
           </p>
           <div>
-            <button className='text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
+            <button className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer'>
               Portfolio
-              <span className='ml-1'>
+              <span className=' group-hover:rotate-90 scroll-smooth duration-500'>
                 <MdOutlineKeyboardArrowRight size={25} />
               </span>
             </button>
           </div>
         </div>
         <div className="md:w-1/2 flex justify-center">
-          <img src={Image} alt="my_img" className='rounded-2xl w-48 md:w-2/3' />
+          <img src={Image} alt="my_img" className='rounded-2xl w-80 md:w-2/3' />
         </div>
       </div>
     </div>

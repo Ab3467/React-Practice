@@ -7,14 +7,14 @@ import About from './components/About'
 export default function App() {
   return (
     <>
-    <div>
-    <Navbar/>
-    <Home/>
-    <About/>
-    <SocialLinks/>
-   
-     </div>
-     
+      <div>
+        <Navbar />
+        <Home />
+        <About />
+        <SocialLinks />
+
+      </div>
+
     </>
   )
 }

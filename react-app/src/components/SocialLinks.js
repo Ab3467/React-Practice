@@ -44,16 +44,15 @@ export default function SocialLinks() {
             style: 'rounded-br-md',
             download: true
         },
-
     ]
     return (
-        <div className=' hidden lg:flex flex-col top-[35%] left-0 fixed'>
+        <div className='hidden lg:flex flex-col top-[35%] left-0 fixed'>
             <ul>
                 {links.map(({ id, child, download, href, style }) => (
-                    <li key={id} className={'flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] rounded-md bg-gray-500 hover:rounded-none duration-500' + " " + style}>
+                    <li key={id} className={`flex justify-between items-center w-40 h-14 px-4 ml-[-100px] hover:ml-[-10px] rounded-md bg-gray-500 hover:rounded-none duration-500 ${style}`}>
                         <a
                             href={href}
-                            className=' flex justify-between w-full text-white items-center'
+                            className='flex justify-between w-full text-white items-center'
                             download={download}
                             target="_blank"
                             rel="noopener noreferrer">

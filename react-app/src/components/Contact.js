@@ -13,6 +13,9 @@ export default function Contact() {
             <form action="">
                 <input type="text" name="name" placeholder="Enter your Name" 
                 className=' p-2 bg-transparent border-2 roun text-white focus:outline-none'/>
+                <input type="email" name="name" placeholder="Enter your Email" 
+                className=' p-2 bg-transparent border-2 roun text-white focus:outline-none'/>
+                <textarea name="message" rows="10"></textarea>
             </form>
         </div>
       </div>

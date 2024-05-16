@@ -11,7 +11,8 @@ export default function Contact() {
 
         <div className="">
             <form action="">
-                <input type="text" name="name" placeholder="Enter your Name" />
+                <input type="text" name="name" placeholder="Enter your Name" 
+                className=' p-2 bg-transparent border-2 roun text-white focus:outline-none'/>
             </form>
         </div>
       </div>

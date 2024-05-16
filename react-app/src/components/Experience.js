@@ -9,6 +9,49 @@ import graphql from "../assets/graphql.png"
 import github from "../assets/github.png"
 
 export default function Experience() {
+    const links=[
+        {
+          id:1,
+          Tech:"HTML",
+          src: html,
+        },
+        {
+            id:2,
+            Tech:"CSS",
+            src: css,
+        },
+        {
+            id:3,
+            Tech:"REACT",
+            src: react,
+        },
+        {
+            id:4,
+            Tech:"JAVASCRIPT",
+            src: javascript,
+        },
+        {
+            id:5,
+            Tech:"TAILWIND",
+            src: tailwind,
+        },
+        {
+            id:6,
+            Tech:"NODE",
+            src: node,
+        },
+        {
+            id:7,
+            Tech:"GITHUB",
+            src: github,
+        },
+        {
+            id:8,
+            Tech:"GRAPHQL",
+            src: graphql,
+        },
+
+    ]
   return (
     <div className=' bg-gradient-to-b from-gray-800 to-black w-full h-screen' name="experience">
       <div className=" max-w-screen-lg w-full h-full mx-auto p-4 flex flex-col justify-center text-white">

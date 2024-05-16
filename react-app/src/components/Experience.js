@@ -16,46 +16,55 @@ export default function Experience() {
           id:1,
           Tech:"HTML",
           src: html,
+          style: " shadow-orange-500"
         },
         {
             id:2,
             Tech:"CSS",
             src: css,
+            style: " shadow-yellow-500"
         },
         {
             id:3,
             Tech:"REACT",
             src: react,
+            style: " shadow-blue-600"
         },
         {
             id:4,
             Tech:"JAVASCRIPT",
             src: javascript,
+            style: " shadow-gray-500"
         },
         {
             id:5,
             Tech:"TAILWIND",
             src: tailwind,
+            style: " shadow-red-500"
         },
         {
             id:6,
             Tech:"NODE",
             src: node,
+            style: " shadow-white"
         },
         {
             id:7,
             Tech:"GITHUB",
             src: github,
+            style: " shadow-pink-500"
         },
         {
             id:8,
             Tech:"GRAPHQL",
             src: graphql,
+            style: " shadow-blue-600"
         },
         {
             id:9,
             Tech:"NEXTJS",
             src: nextjs,
+            style: " shadow-orange-500"
         },
 
     ]
@@ -68,8 +77,8 @@ export default function Experience() {
         </div>
         <div className=" w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center px-8 py-12 sm:px-0">
             
-            {links.map(({id,src,Tech})=>(
-               <div className=" shadow-md hover:scale-105 duration-500 py-2 rounded-lg" key={id}>
+            {links.map(({id,src,Tech,style})=>(
+               <div className={" shadow-md hover:scale-105 duration-500 py-2 rounded-lg"+ " "+ style} key={id}>
                <img src={src} alt="html" className='w-20 mx-auto'/>
                <p className='mt-4'>{Tech}</p>
             </div>

@@ -10,7 +10,7 @@ export default function Contact() {
         </div>
 
         <div className='flex justify-center items-center'>
-            <form action="" className='flex flex-col w-full md:w-1/2'>
+            <form action="mailto:ahmad.abubakar@vyro.ai" className='flex flex-col w-full md:w-1/2'>
                 <input type="text" name="name" placeholder="Enter your Name" 
                 className=' p-2 bg-transparent border-2 roun text-white focus:outline-none'/>
 

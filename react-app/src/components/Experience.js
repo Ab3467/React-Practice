@@ -7,6 +7,8 @@ import node from "../assets/node.png"
 import tailwind from "../assets/tailwind.png"
 import graphql from "../assets/graphql.png"
 import github from "../assets/github.png"
+import nextjs from "../assets/nextjs.png"
+
 
 export default function Experience() {
     const links=[
@@ -50,6 +52,11 @@ export default function Experience() {
             Tech:"GRAPHQL",
             src: graphql,
         },
+        {
+            id:9,
+            Tech:"NEXTJS",
+            src: nextjs,
+        },
 
     ]
   return (
@@ -60,10 +67,14 @@ export default function Experience() {
             <p className='py-6'>These are the Technologies I've worked with</p>
         </div>
         <div className=" w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center px-8 py-12 sm:px-0">
-            <div className=" shadow-md hover:scale-105 duration-500 py-2 rounded-lg">
-                <img src={html} alt="html" className='w-20 mx-auto'/>
-                <p className='mt-4'>HTML</p>
+            
+            {links.map(({id,src,Tech})=>(
+               <div className=" shadow-md hover:scale-105 duration-500 py-2 rounded-lg" key={id}>
+               <img src={src} alt="html" className='w-20 mx-auto'/>
+               <p className='mt-4'>{Tech}</p>
             </div>
+            ))}
+
         </div>
       </div>
     </div>

@@ -17,5 +17,3 @@ export default function About() {
     )
 }
 
-
-//yeah its just for github comment
